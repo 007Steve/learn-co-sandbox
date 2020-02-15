@@ -7,23 +7,26 @@ class Greatest::CLI
         Welcome to the Greatest NBA player list!
         
         "
-        show_player
+        get_player
         list_player
         get_stats
         
     end
     
-    def show_player
-     puts" Select one of the Greatest NBA players
-    
-     "
-     @player = ["Michael Jordan",'Hakeem Olajuwon','Shaquille ONeal', 'Tim Duncan',"Wilt Chamberlain","LeBron James","Larry Bird"] 
+    def get_player
+     
+     Greatest::Player.new("kobe")
+     Greatest::Player.new("lebron")
+     @player =  Greatest::Player.all
       
      
     end
     
     def list_player
-      @player.each.with_index(1) do | player, index| puts"#{index} #{player} "
+      puts" Select one of the Greatest NBA players
+    
+     "
+      @player.each.with_index(1) do | player, index| puts"#{index} #{player.name} "
       end
       end
       def get_stats
