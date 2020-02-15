@@ -8,6 +8,7 @@ class Greatest::Player
   end
   
   def self.all
+   Greatest::Scraper.scraper_player if @@all.empty?
     @@all
   end
   
