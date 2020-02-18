@@ -6,11 +6,11 @@ class Greatest::CLI
         puts" 
         Welcome to the Greatest NBA player list!
         
-        "
+        ".red
         get_player
         list_player
         get_stats
-        Greatest::Scraper.scraper_player
+        
         
     end
     
@@ -26,7 +26,7 @@ class Greatest::CLI
     def list_player
       puts" Select one of the Greatest NBA players
     
-     "
+     ".blue
       @player.each.with_index(1) do | player, index| puts"#{index} #{player.name} "
       end
       end
@@ -41,6 +41,6 @@ class Greatest::CLI
     end
     def show_player_for(select_player)
       player = @player [select_player -1]
-      puts "here are the stats #{player}"
+      puts "here are the stats #{player.name}"
     end
   end
