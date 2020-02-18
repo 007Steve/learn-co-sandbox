@@ -10,13 +10,14 @@ class Greatest::CLI
         get_player
         list_player
         get_stats
+        Greatest::Scraper.scraper_player
         
     end
     
     def get_player
      
-     Greatest::Player.new("kobe")
-     Greatest::Player.new("lebron")
+     
+     
      @player =  Greatest::Player.all
       
      
