@@ -2,6 +2,7 @@ require_relative "./greatest/version"
 require_relative "./greatest/cli"
 require_relative "./greatest/player"
 require_relative "./greatest/scraper"
+require_relative "./greatest/Statistics"
 
 
 require 'nokogiri'

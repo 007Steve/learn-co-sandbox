@@ -3,13 +3,17 @@ class Greatest::CLI
   def start
         
 
-        puts" 
-        Welcome to the Greatest NBA player list!
         
-        ".red
          puts "Please enter your name for a more personalize experience"
+         
+         
         users_name = gets.strip
-        puts " Hello #{users_name} welcome to the Greatest NBA player list!
+        puts "
+        
+        
+        
+        
+        Hello #{users_name} welcome to the Greatest NBA player list!
         
         "
         get_player
@@ -32,7 +36,7 @@ class Greatest::CLI
       puts" Select one of the Greatest NBA players
     
      ".blue
-      @player.each.with_index(1) do | player, index| puts"#{index} #{player.name} "
+      @player.each do | player, index| puts"#{index} #{player.name} "
       end
       end
       def get_stats
@@ -46,6 +50,6 @@ class Greatest::CLI
     end
     def show_player_for(select_player)
       player = @player [select_player -1]
-      puts " here are the stats #{player.name}"
+      puts  "here are the stats #{player.name}"
     end
   end
