@@ -1,5 +1,5 @@
 class Greatest::Player
-  attr_accessor :name 
+  attr_accessor :name, :stats  
   @@all = []
   
   def initialize(name)

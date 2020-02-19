@@ -7,6 +7,11 @@ class Greatest::CLI
         Welcome to the Greatest NBA player list!
         
         ".red
+         puts "Please enter your name for a more personalize experience"
+        users_name = gets.strip
+        puts " Hello #{users_name} welcome to the Greatest NBA player list!
+        
+        "
         get_player
         list_player
         get_stats
@@ -41,6 +46,6 @@ class Greatest::CLI
     end
     def show_player_for(select_player)
       player = @player [select_player -1]
-      puts "here are the stats #{player.name}"
+      puts " here are the stats #{player.name}"
     end
   end
