@@ -1,13 +1,26 @@
-class Greatest::CLI 
+class Greatest::CLI
   
   def start
-       puts "Welcome to the Greatest NBA player list!"
-  end
+  
+  put" hello"
+end
+  
+  
+  def show_dogs
     
     
-    def list_player
-      
-      
-    end
-   
   end
+  
+  
+  
+  def show_info
+    
+  end
+  
+  def menu
+    
+    
+    
+  end
+  
+end

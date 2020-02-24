@@ -1,4 +1,0 @@
-class Greatest::Player
-  
-  
-end
