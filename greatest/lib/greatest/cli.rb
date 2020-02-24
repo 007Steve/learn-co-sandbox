@@ -1,3 +1,4 @@
+require'pry'
 class Greatest::CLI
   
   def start
@@ -51,25 +52,27 @@ end
 end
 
   def show_dogs
-    
-    
+   Greatest::Dog.all.each.with_index(1) do |dog, i|
+      puts "#{i}.   #{dog.name}"
+    end
   end
   
   
   
   def show_info
-    
+    Greatest::Dog.all
   end
   
   def menu
     input = nil
     while input != "exit"
-    puts "Enter the number of the god you want more information on, type list to see list, or exit"
+    puts "Enter the number of the dog you want more information on, type list to see list, or exit"
     input = gets.strip.downcase
     
-    if input > 0 && input.to_i <10
-    
-    puts""
+    if input.to_i > 0 && input.to_i <18
+      
+    doggie = show_info[input.to_i-1]
+    puts"#{doggie.name} - #{doggie.info}"
     elsif input == "list"
     show_dogs
     elsif input != "exit"
