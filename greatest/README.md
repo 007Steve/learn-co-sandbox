@@ -2,7 +2,8 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/greatest`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Recently my girlfriend and I have been searching for a dog, we spent hours online filling out 
+application, emailing and contacting animal shelters. So I decided to base my CLI project on that experience . To create a gem that list the common known dog breeds and provide information about  that specific breeds nature, I called it  the worlds greatest dog breeds. 
 
 ## Installation
 
