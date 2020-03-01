@@ -2,6 +2,8 @@ require'pry'
 class Greatest::CLI
   
   def start
+    puts "Welcome to The World’s Greatest Dog Breeds! "
+    puts "Here are the top ten dog list "
   Greatest::Scraper.scraper_dogs
   welcome
   menu
