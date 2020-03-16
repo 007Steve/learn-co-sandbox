@@ -2,15 +2,18 @@ require'pry'
 class Greatest::CLI
   
   def start
+    
     puts "Welcome to The World’s Greatest Dog Breeds! "
     puts "Here are the top ten dog list "
-  Greatest::Scraper.scraper_dogs
+  
+  
   welcome
   menu
   bye
 end
   
   def welcome
+    Greatest::Dog.german_dogs
     puts <<-'EOF'
     
       __.                                              
@@ -51,6 +54,7 @@ end
     
     
     EOF
+    show_dogs
 end
 
   def show_dogs
@@ -61,8 +65,10 @@ end
   
   
   
-  def show_info
-    Greatest::Dog.all
+  def show_info(input)
+    
+     doggie = Greatest::Dog.all[input.to_i-1]
+    puts"#{doggie.name} - #{doggie.info}"
   end
   
   def menu
@@ -71,10 +77,10 @@ end
     puts "Enter the number of the dog you want more information on, type list to see list, or exit"
     input = gets.strip.downcase
     
-    if input.to_i > 0 && input.to_i <18
-      
-    doggie = show_info[input.to_i-1]
-    puts"#{doggie.name} - #{doggie.info}"
+    if input.to_i > 0 && input.to_i <= Greatest::Dog.num_of_dogs
+      show_info(input)
+    # doggie = show_info[input.to_i-1]
+    # puts"#{doggie.name} - #{doggie.info}"
     elsif input == "list"
     show_dogs
     elsif input != "exit"
